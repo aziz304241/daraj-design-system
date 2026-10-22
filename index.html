@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1958FF">
+<meta name="description" content="مكتبة نظام التصميم Daraj Design System — مرجع سريع لمكوّنات درج وروابط Figma.">
+<title>Daraj Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--brand:#1958ff;--ink:#172033;--muted:#68738a;--line:#e7ebf3;--soft:#f5f7fb;--white:#fff;--radius:20px}
+*{box-sizing:border-box}body{margin:0;background:#f8faff;color:var(--ink);font-family:"IBM Plex Sans Arabic",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.shell{max-width:1120px;margin:auto;padding:28px 22px 56px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:44px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:19px}.mark{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--brand);color:white;font-size:22px;box-shadow:0 8px 20px #1958ff30}
+.repo{border:1px solid var(--line);background:white;border-radius:12px;padding:9px 14px;color:#34415b;font-size:13px;font-weight:600}
+.hero{padding:36px 0 34px;max-width:760px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--brand);background:#eaf0ff;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.2;letter-spacing:-1.5px;margin:18px 0 14px}.hero p{font-size:17px;color:var(--muted);max-width:650px;margin:0}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.stat{border:1px solid var(--line);background:white;border-radius:12px;padding:8px 13px;color:#4d5a73;font-size:13px}.stat strong{color:var(--ink)}
+.toolbar{display:flex;align-items:center;gap:12px;margin:25px 0 20px;flex-wrap:wrap}.search{flex:1;min-width:230px;position:relative}.search input{width:100%;height:48px;border:1px solid #dfe5ef;border-radius:14px;background:white;padding:0 44px 0 14px;font:inherit;outline:none}.search input:focus{border-color:var(--brand);box-shadow:0 0 0 3px #1958ff18}.search span{position:absolute;right:15px;top:11px;color:#8390a7;font-size:18px}
+.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:white;color:#566178;padding:9px 14px;border-radius:12px;font:inherit;font-size:13px;cursor:pointer}.filter.active,.filter:hover{background:var(--brand);border-color:var(--brand);color:white}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:30px 0 14px}.section-head h2{font-size:21px;margin:0}.section-head p{font-size:13px;color:var(--muted);margin:3px 0 0}.count{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{display:flex;flex-direction:column;min-height:224px;background:white;border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:transform .18s,border-color .18s,box-shadow .18s}.card:hover{transform:translateY(-3px);border-color:#c8d5ff;box-shadow:0 12px 32px #1d3b7410}.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.iconbox{width:46px;height:46px;border-radius:14px;background:#edf2ff;color:var(--brand);display:grid;place-items:center;font-size:21px;font-weight:700}.tag{font-size:11px;color:#596780;background:var(--soft);padding:5px 9px;border-radius:8px}.card h3{font-size:18px;margin:18px 0 5px}.card p{font-size:13px;color:var(--muted);margin:0 0 20px}.card-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}.open{font-size:13px;color:var(--brand);font-weight:700;display:inline-flex;align-items:center;gap:7px}.open span{font-size:18px;transition:transform .2s}.card:hover .open span{transform:translateX(-3px)}.empty{display:none;text-align:center;padding:40px 16px;color:var(--muted);border:1px dashed #cfd7e5;border-radius:16px;background:white}
+.foundation{margin-top:42px;padding:23px;border:1px solid var(--line);border-radius:var(--radius);background:white;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}.foundation h2{font-size:18px;margin:0 0 4px}.foundation p{font-size:13px;color:var(--muted);margin:0}.swatches{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.swatch{display:flex;align-items:center;gap:8px;font-size:12px;color:#596780}.dot{width:25px;height:25px;border-radius:8px;border:1px solid #00000012}.footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:30px;color:#8a94a8;font-size:12px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.topbar{margin-bottom:24px}.hero{padding-top:22px}}@media(max-width:540px){.shell{padding:20px 15px 40px}.grid{grid-template-columns:1fr}.card{min-height:200px}.repo{font-size:12px}.hero p{font-size:15px}.foundation{align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar">
+<a class="brand" href="#" aria-label="Daraj Design System"><span class="mark">د</span><span>Daraj <span style="color:#7d879a;font-weight:500">/ Design System</span></span></a>
+<a class="repo" href="https://github.com/aziz304241/daraj-design-system" target="_blank" rel="noreferrer">↗ مستودع GitHub</a>
+</header>
+<main>
+<section class="hero">
+<span class="eyebrow">● مكتبة التصميم · الإصدار الأول</span>
+<h1>كل مكوّن له مكانه.</h1>
+<p>مرجع موحّد لمكوّنات واجهة درج، يساعد فريق التصميم والتطوير على الوصول إلى ملفات Figma بسرعة والحفاظ على تجربة متناسقة عبر المنتج.</p>
+<div class="stats"><span class="stat"><strong>Daraj</strong> POS</span><span class="stat"><strong>RTL</strong> تصميم عربي أولًا</span><span class="stat"><strong>Figma</strong> مصدر المكوّنات</span></div>
+</section>
+<section aria-label="مكتبة المكونات">
+<div class="section-head"><div><h2>مكتبة المكوّنات</h2><p>اختر مكوّنًا لفتح ملفه في Figma.</p></div><span class="count" id="count">مكوّنان</span></div>
+<div class="toolbar">
+<label class="search"><span>⌕</span><input id="search" type="search" placeholder="ابحث عن مكوّن… مثل Button أو حقل الإدخال" aria-label="ابحث عن مكوّن"></label>
+<div class="filters" role="group" aria-label="تصفية حسب النوع"><button class="filter active" data-filter="all">الكل</button><button class="filter" data-filter="actions">الأزرار</button><button class="filter" data-filter="forms">حقول الإدخال</button></div>
+</div>
+<div class="grid" id="grid">
+<article class="card" data-category="actions" data-search="button buttons زر أزرار actions primary secondary">
+<div class="card-top"><div class="iconbox">↗</div><span class="tag">Actions · الإجراءات</span></div>
+<h3>Buttons — الأزرار</h3><p>استكشف أنماط الأزرار وحالاتها واستخداماتها داخل واجهات درج.</p>
+<div class="card-foot"><span class="tag">Component showcase</span><a class="open" href="https://www.figma.com/design/25TliLYP8KXTMYDwnSbeEF/Durj_V1?node-id=2257-846" target="_blank" rel="noreferrer">فتح في Figma <span>←</span></a></div>
+</article>
+<article class="card" data-category="forms" data-search="input field text field حقل الإدخال حقول forms input">
+<div class="card-top"><div class="iconbox">T</div><span class="tag">Forms · النماذج</span></div>
+<h3>Input Field — حقل الإدخال</h3><p>المكوّن الأساسي لإدخال النصوص والبيانات ضمن النماذج.</p>
+<div class="card-foot"><span class="tag">Main component</span><a class="open" href="https://www.figma.com/design/25TliLYP8KXTMYDwnSbeEF/Durj_V1?node-id=2276-671" target="_blank" rel="noreferrer">فتح في Figma <span>←</span></a></div>
+</article>
+<article class="card" data-category="forms" data-search="input field qa states validation error حقل الإدخال حالات اختبار">
+<div class="card-top"><div class="iconbox">✓</div><span class="tag">QA · مراجعة الحالات</span></div>
+<h3>Input Field — حالات المراجعة</h3><p>عرض مخصّص لمراجعة حالات حقل الإدخال والتحقق من تفاصيله.</p>
+<div class="card-foot"><span class="tag">QA showcase</span><a class="open" href="https://www.figma.com/design/25TliLYP8KXTMYDwnSbeEF/Durj_V1?node-id=2276-672" target="_blank" rel="noreferrer">فتح في Figma <span>←</span></a></div>
+</article>
+</div>
+<div class="empty" id="empty">لم نعثر على مكوّن بهذا الاسم. جرّب كلمة أخرى.</div>
+</section>
+<section class="foundation">
+<div><h2>أساسيات الهوية</h2><p>ألوان وخطوط مختارة للحفاظ على الاتساق البصري.</p></div>
+<div class="swatches"><span class="swatch"><i class="dot" style="background:#1958FF"></i>Primary · #1958FF</span><span class="swatch"><i class="dot" style="background:#172033"></i>Text · #172033</span><span class="swatch"><i class="dot" style="background:#F5F7FB"></i>Surface · #F5F7FB</span><span class="swatch">Aa&nbsp; IBM Plex Sans Arabic</span></div>
+</section>
+</main>
+<footer class="footer"><span>Daraj Design System · مرجع داخلي للفريق</span><span>مصدر التصميم: Figma</span></footer>
+</div>
+<script>
+const search=document.getElementById('search'), cards=[...document.querySelectorAll('.card')], filters=[...document.querySelectorAll('.filter')], count=document.getElementById('count'), empty=document.getElementById('empty');let active='all';
+function update(){const q=search.value.trim().toLowerCase();let visible=0;cards.forEach(card=>{const okCategory=active==='all'||card.dataset.category===active;const okText=(card.dataset.search+' '+card.innerText).toLowerCase().includes(q);card.style.display=okCategory&&okText?'flex':'none';if(okCategory&&okText)visible++});count.textContent=visible+' من '+cards.length+' مكوّنات';empty.style.display=visible?'none':'block'}
+search.addEventListener('input',update);filters.forEach(btn=>btn.addEventListener('click',()=>{active=btn.dataset.filter;filters.forEach(b=>b.classList.toggle('active',b===btn));update()}));update();
+</script>
+</body>
+</html>
